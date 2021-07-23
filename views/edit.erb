@@ -1,0 +1,17 @@
+<section class="box">
+	<% if @note %>
+		<form action="/<%= @note.id %>" method="post">
+			<input type="hidden" name="_method" value="put">
+			<textarea class="textbox" name="content"><%=h @note.content %></textarea>
+			<input class="btn" type="submit" value="Save it!">
+			<br>
+			<div class="check-box">
+				<input type="checkbox" name="complete" <%= "checked" if @note.complete %> >
+				<span class="confirm">Completed </span>
+			</div>
+		</form>
+		<p class="delete"><a href="/<%= @note.id %>/delete">[Delete This Note]</a></p>
+	<% else %>
+		<p class="not_found"> Note Not Found! </p>
+	<% end %>
+</section>

@@ -1,0 +1,32 @@
+<section class="box">
+	<form action="/" method="post">
+		<textarea class="textbox" name="content" placeholder="Type Something..."></textarea>
+		<input class="btn" type="submit" value="Note it down!">
+	</form>
+</section>
+
+<div class="container">
+<% @notes.each do |note| %>
+	<div class="notes">
+		<div class="row">
+			<div class="col-11">
+				<p class="content">
+					<%=h note.content %>
+					<span class="edit"><a href="/<%= note.id %>" >[Edit]</a></span>
+	    		</p>
+    		</div>
+    		<div class="col-1">
+	  	  		<a href="/<%= note.id %>/complete" style="color: green;">
+	  	  			<i class="complete-icon <%= note.complete ? "fas fa-check-square" : "far fa-check-square" %>"></i>
+	  	  		</a>
+    		</div>
+	    </div>
+	    <div class="row">
+	    	<div class="col">
+	    		<p class="time-display">Created: <%= note.created_at %></p>
+	    	</div>
+	    </div>
+	</div>
+<% end %>
+</div>
+

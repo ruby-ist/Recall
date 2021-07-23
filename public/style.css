@@ -1,0 +1,195 @@
+.heading{
+	color: green;
+	font-family: 'Caveat', cursive;
+}
+
+.heading:hover{
+	color: lightgreen;
+}
+
+header{
+	margin-top: 60px;
+}
+
+a{
+	text-decoration: none;
+}
+
+h1{
+	text-align: center;
+}
+
+body{
+	background-color: #F8FCFB;
+	margin: 0px 65px;
+}
+.heading-quote{
+	text-align: center;
+	color: grey;
+	font-family: 'Special Elite', cursive;
+	margin: 25px auto;
+	font-size: medium;
+}
+
+.box{
+	margin: 40px 0px;
+}
+
+.textbox{
+	width: 85%;
+    height: 75px;
+    vertical-align: middle;
+    font-family: 'Yomogi', cursive;
+    font-size: medium;
+    margin-right: 40px;
+    padding: 10px;
+}
+
+textarea:focus{
+	outline-color: green;
+}
+
+footer{
+	font-size: small;
+	color: grey;
+	text-align: center;
+	margin: 150px 0px 25px ;
+}
+
+.edit{
+	opacity: 0.6;
+}
+
+.check-box{
+	font-weight: 300;
+}
+
+.confirm{
+	margin-left: 10px;
+}
+
+.delete{
+	margin: 55px 0px 230px;
+}
+
+.btn{
+	width: 120px;
+	height: 75px;
+	vertical-align: middle;
+	margin: 30px 0px 30px;
+	border-radius: 4px;
+	border: 2px solid green;
+	background-color: #C6FFC1;
+	color: green;
+	font-weight: 300;
+	font-size: larger;
+	font-family: 'Caveat', cursive;
+}
+
+.content{
+	font-family: 'Yomogi', cursive;
+	font-weight: 700;
+	font-size: larger;
+	padding: 15px 5px 20px
+}
+
+.notes{
+	border: 1px solid black;
+	margin-bottom: -1px;
+}
+
+.notes:nth-of-type(2n+1){
+	background-color: #eeeeee;
+}
+
+.notes:nth-of-type(2n){
+	background-color: #fff;
+}
+
+.row{
+	padding-left: 10px;
+}
+
+.time-display{
+	font-size: 69%;
+	color: dimgrey;
+}
+
+.container{
+	width: 80%;
+}
+
+.complete-icon{
+	margin-top: 45px;
+}
+
+
+.cliffhanger{
+	width: 60%;
+	height: 120px;
+	border: 1px solid grey;
+	background-color: white;
+	border-radius: 11px;
+	padding: 10px;
+	font-family: 'Yomogi', cursive;
+	font-size: medium;
+	margin: 30px 0px 50px;
+}
+
+.delete-btn{
+	width: 11%;
+	height: 55px;
+	margin-right: 20px;
+	background-color: white;
+	border: 2px solid green;
+	border-radius: 8px;
+	color: green;
+	font-weight: 100;
+	font-size: larger;
+	letter-spacing: 1px;
+	font-family: 'Caveat', cursive;
+}
+
+.cancel-btn{
+	width: 11%;
+	height: 55px;
+	margin-right: 20px;
+	background-color: #C6FFC1;
+	border: 2px solid green;
+	border-radius: 8px;
+	color: green;
+	font-weight: 100;
+	font-size: larger;
+	letter-spacing: 1px;
+	font-family: 'Caveat', cursive;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.notice{
+	color: green;
+	font-family:'Special Elite', cursive;
+	font-size: small;
+}
+
+.error{
+	color: orangered;
+	font-family:'Special Elite', cursive;
+	font-size: small;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

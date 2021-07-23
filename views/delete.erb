@@ -1,0 +1,13 @@
+<% if @note %>
+	<p class="check-box">Are you sure you want to delete this note:</p>
+	<div class="cliffhanger">
+		<%=h @note.content %>
+	</div>
+	<form action="/<%= @note.id%>" method="post" style="display:inline;">
+		<input type="hidden" name="_method" value="delete">
+		<input class="delete-btn" type="submit" value="Delete it">
+	</form>
+	<a href="/<%= @note.id %>"><button class="cancel-btn">Cancel</button></a>
+<% else %>
+	<p class="not_found"> Note Not Found! </p>
+<% end %>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<title><%= "Recall App | " + @title %></title>
+
+	<link rel="icon" href="/images/favicon.ico">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Special+Elite&display=swap&family=Yomogi&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="/style.css?parameter=5">
+</head>
+<body>
+	<header>
+		<h1><a class="heading" href="/">RECALL</a></h1>
+		<h3 class="heading-quote">'Coz there is a possibility that you might forgot!!</h3>
+	</header>
+
+	<% if flash[:notice] %>
+		<p class="notice"><%= flash[:notice] %>
+	<% end %>
+
+	<% if flash[:error] %>
+		<p class="error"><%= flash[:error] %>
+	<% end %>
+
+	<div>
+		<%= yield %>
+	</div>
+
+	<footer>
+		<i>An app by <a href="https://ruby-ist.github.io/blog/">Ruby-ist</a></i>
+	</footer>
+</body>
+</html>
