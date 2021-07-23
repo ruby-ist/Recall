@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
-require 'dm-sqlite-adapter'
+
 require 'dm-core'
 require 'dm-timestamps'
 require 'dm-validations'

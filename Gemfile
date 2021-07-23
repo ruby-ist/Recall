@@ -14,7 +14,6 @@ gem 'dm-timestamps'
 gem 'dm-migrations'
 gem 'dm-validations'
 gem 'sinatra-redirect-with-flash', :require=>'sinatra/redirect_with_flash'
-gem 'data_mapper', :require=>false
 
 group :production do
 	gem 'puma'
