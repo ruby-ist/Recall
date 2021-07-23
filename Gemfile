@@ -8,13 +8,12 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 gem 'sinatra'
 gem 'sinatra-flash', :require=>'sinatra/flash'
-gem 'dm-sqlite-adapter'
+gem 'dm-sqlite-adapter', :group=> :development
 gem 'dm-core'
 gem 'dm-timestamps'
 gem 'dm-migrations'
 gem 'dm-validations'
 gem 'sinatra-redirect-with-flash', :require=>'sinatra/redirect_with_flash'
 
-group :production do
-	gem 'puma'
-end
+gem 'puma', :group=> :production
+gem 'dm-postgres-adapter', :group=> :production
