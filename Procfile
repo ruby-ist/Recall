@@ -1,1 +1,1 @@
-web: bundle exec ruby recall.rb -p $PORT
+web: /bin/bash -l -c "bundle exec ruby recall.rb"
