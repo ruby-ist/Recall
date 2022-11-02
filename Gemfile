@@ -16,4 +16,4 @@ gem 'dm-validations'
 gem 'sinatra-redirect-with-flash', :require=>'sinatra/redirect_with_flash'
 
 gem 'puma', :group=> :production
-gem 'dm-postgres-adapter', :group=> :production
+gem 'dm-mysql-adapter', :group=> :production
