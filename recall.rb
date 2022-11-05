@@ -1,32 +1,13 @@
 require 'sinatra'
 require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
+require 'sinatra/activerecord'
 
-require 'dm-core'
-require 'dm-timestamps'
-require 'dm-validations'
-require 'dm-migrations'
+set :database_file, 'config/database.yml'
 
-configure :development do
-  DataMapper.setup(:default,"sqlite3://#{Dir.pwd}/recall.db")
+class Note < ActiveRecord::Base
+    validates :content, presence: true
 end
-
-configure :production do
-  DataMapper.setup(:default, ENV["DATABASE_URL"])
-end
-
-class Note
-  include DataMapper::Resource
-
-  property :id, Serial
-  property :content, Text, :required => true, :lazy => false
-  property :complete, Boolean
-  property :created_at, DateTime
-  property :updated_at, DateTime
-
-end
-
-DataMapper.finalize.auto_upgrade!
 
 enable :sessions
 
@@ -36,7 +17,7 @@ helpers do
 end
 
 get "/" do
-  @notes = Note.all :order => :id.desc
+  @notes = Note.order(id: :desc)
   @title = "All Notes"
   if @notes.empty?
     flash[:error] = "No notes as of now to display!"
@@ -58,7 +39,7 @@ post "/" do
 end
 
 get "/:id" do
-  @note = Note.get params[:id]
+  @note = Note.find params[:id]
   @title = "Edit Note ##{@note.id}"
   if @note
     erb :edit
@@ -68,7 +49,7 @@ get "/:id" do
 end
 
 put "/:id" do
-  n = Note.get params[:id]
+  n = Note.find params[:id]
   n.content = params[:content]
   n.complete = params[:complete] ? true : false
   n.updated_at = Time.now
@@ -80,7 +61,7 @@ put "/:id" do
 end
 
 get "/:id/delete" do
-  @note = Note.get params[:id]
+  @note = Note.find params[:id]
   @title = "Confirm Delete"
   if @note
     erb :delete
@@ -90,7 +71,7 @@ get "/:id/delete" do
 end
 
 delete "/:id" do
-  n = Note.get params[:id]
+  n = Note.find params[:id]
   if n.destroy
     redirect "/", :notice=>"Note ##{params[:id]} deleted successfully!"
   else
@@ -99,8 +80,8 @@ delete "/:id" do
 end
 
 get "/:id/complete" do
-  n = Note.get params[:id]
-  n.complete = n.complete ? false : true
+  n = Note.find params[:id]
+  n.complete = !n.complete
   n.updated_at = Time.now
   n.save
   redirect "/"
