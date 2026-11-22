@@ -26,6 +26,7 @@ GEM
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.7.5)
+    ostruct (0.6.3)
     pg (1.4.4)
     prism (2.1.0)
     prism (2.1.0-arm64-darwin)
@@ -70,6 +71,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-cockroachdb-adapter
+  ostruct (>= 0.6.3)
   puma
   rake
   sinatra
