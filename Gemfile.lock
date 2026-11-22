@@ -16,13 +16,21 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
     concurrent-ruby (1.1.10)
+    drb (2.2.3)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    minitest (5.16.3)
+    mini_portile2 (2.8.9)
+    minitest (6.1.0)
+      drb (~> 2.0)
+      prism (>= 1.5, < 3)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
-    nio4r (2.5.8)
+    nio4r (2.7.5)
     pg (1.4.4)
+    prism (2.1.0)
+    prism (2.1.0-arm64-darwin)
+    prism (2.1.0-x86_64-darwin)
+    prism (2.1.0-x86_64-linux-gnu)
     puma (6.0.0)
       nio4r (~> 2.0)
     rack (2.2.4)
@@ -46,6 +54,8 @@ GEM
       sinatra (>= 1.0.0)
     sinatra-redirect-with-flash (0.2.1)
       sinatra (>= 1.0.0)
+    sqlite3 (1.5.3)
+      mini_portile2 (~> 2.8.0)
     sqlite3 (1.5.3-arm64-darwin)
     sqlite3 (1.5.3-x86_64-linux)
     tilt (2.0.11)
@@ -54,6 +64,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  arm64-darwin-25
   universal-darwin-20
   x86_64-linux
 
@@ -68,7 +79,7 @@ DEPENDENCIES
   sqlite3
 
 RUBY VERSION
-   ruby 2.7.4p191
+  ruby 4.0.10
 
 BUNDLED WITH
-   2.2.26
+  4.1.0

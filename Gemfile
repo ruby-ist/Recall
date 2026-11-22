@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-ruby '2.7.4'
+ruby '4.0.10'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-gem 'sinatra'
-gem 'sinatra-flash', :require=>'sinatra/flash'
-gem 'sqlite3', :group=> :development
-gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
-gem 'sinatra-redirect-with-flash', :require=>'sinatra/redirect_with_flash'
+gem 'activerecord-cockroachdb-adapter', group: :production
+gem 'puma', group: :production
 gem 'rake'
-gem 'puma', :group=> :production
-gem 'activerecord-cockroachdb-adapter', :group=> :production
+gem 'sinatra'
+gem 'sinatra-activerecord', require: 'sinatra/activerecord'
+gem 'sinatra-flash', require: 'sinatra/flash'
+gem 'sinatra-redirect-with-flash', require: 'sinatra/redirect_with_flash'
+gem 'sqlite3', group: :development
