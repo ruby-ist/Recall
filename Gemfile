@@ -8,6 +8,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 gem 'activerecord-cockroachdb-adapter', group: :production
 gem 'logger', '>= 1.7'
+gem 'mutex_m', '>= 0.3.0'
 gem 'ostruct', '>= 0.6.3'
 gem 'puma', group: :production
 gem 'rake'
