@@ -3,7 +3,7 @@ require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
 require 'sinatra/activerecord'
 
-set :database_file, File.expand_path('config/database.yml', __dir__)
+set :database_file, 'config/database.yml'
 
 class Note < ActiveRecord::Base
   validates :content, presence: true
