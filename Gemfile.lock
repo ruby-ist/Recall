@@ -15,6 +15,7 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    benchmark (0.5.0)
     concurrent-ruby (1.1.10)
     drb (2.2.3)
     i18n (1.12.0)
@@ -73,6 +74,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-cockroachdb-adapter
+  benchmark (>= 0.5.0)
   logger (>= 1.7)
   mutex_m (>= 0.3.0)
   ostruct (>= 0.6.3)
